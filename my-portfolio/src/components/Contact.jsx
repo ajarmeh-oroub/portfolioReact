@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
+import Swal from 'sweetalert2'; // Import SweetAlert
 
 export default function Contact() {
   const [captchaValue, setCaptchaValue] = useState('');
@@ -46,7 +47,6 @@ export default function Contact() {
       email,
       message,
     }, '-rJ_ERf_0tM3hodn8')
- 
       .then(
         (response) => {
           console.log('Message sent successfully', response);
@@ -55,11 +55,23 @@ export default function Contact() {
           setEmail('');
           setMessage('');
           setCaptchaValue('');
-          alert('Your message has been sent successfully!');
+          // Show SweetAlert success message
+          Swal.fire({
+            title: 'Success!',
+            text: 'Your message has been sent successfully!',
+            icon: 'success',
+            confirmButtonText: 'Okay',
+          });
         },
         (error) => {
           console.error('Error sending message', error);
-          alert('Something went wrong. Please try again later.');
+          // Show SweetAlert error message
+          Swal.fire({
+            title: 'Error!',
+            text: 'Something went wrong. Please try again later.',
+            icon: 'error',
+            confirmButtonText: 'Okay',
+          });
         }
       );
   };
