@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
+import { useState } from 'react';
 import emailjs from 'emailjs-com';
 
 export default function Contact() {
@@ -25,7 +24,7 @@ export default function Contact() {
       return;
     }
 
-    // Check if CAPTCHA is completed
+    // Check if CAPTCHA is completed (you can enable it when required)
     // if (!captchaValue) {
     //   setError('Please complete the CAPTCHA.');
     //   return;
@@ -34,28 +33,35 @@ export default function Contact() {
     // Clear any previous errors
     setError('');
 
-    // Send the form data via EmailJS
+    // EmailJS send call
+    const templateParams = {
+      name: name,
+      email: email,
+      message: message,
+    };
 
     emailjs
-      .sendForm(
-        'service_or66nvs', // Replace with your EmailJS service ID
-       'template_byn78oh', // Replace with your EmailJS template ID
-        e.target,
-        '-rJ_ERf_0tM3hodn8' // Replace with your EmailJS user ID
-      )
-      .then((response) => {
-        console.log('Message sent successfully', response);
-        // Clear the form after successful submission
-        setName('');
-        setEmail('');
-        setMessage('');
-        setCaptchaValue('');
-        alert('Your message has been sent successfully!');
-      })
-      .catch((error) => {
-        console.error('Error sending message', error);
-        alert('Something went wrong. Please try again later.');
-      });
+    .sendForm(
+      'service_or66nvs', 
+     'template_byn78oh', 
+      e.target,
+      '-rJ_ERf_0tM3hodn8'
+    )
+      .then(
+        (response) => {
+          console.log('Message sent successfully', response);
+          // Clear the form after successful submission
+          setName('');
+          setEmail('');
+          setMessage('');
+          setCaptchaValue('');
+          alert('Your message has been sent successfully!');
+        },
+        (error) => {
+          console.error('Error sending message', error);
+          alert('Something went wrong. Please try again later.');
+        }
+      );
   };
 
   return (
@@ -118,26 +124,25 @@ export default function Contact() {
           </form>
         </div>
         <div className="col-lg-4 col-md-5">
-  <div className="h-100 d-flex flex-column align-items-center justify-content-center" style={{ padding: '20px', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
-    <h4>Contact Information</h4>
-    <p style={{ fontSize: '1rem', color: '#777', marginTop: '20px', textAlign: 'center' }}>
-      Feel free to reach out to me for any inquiries or questions.
-    </p>
-    <p style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
-      <span style={{ width: '30px', height: '30px', backgroundColor: '#A16FEC', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', marginRight: '10px' }}>
-        <i className="fas fa-phone-alt" style={{ color: '#fff' }}></i>
-      </span>
-      +962790647508
-    </p>
-    <p style={{ display: 'flex', alignItems: 'center' }}>
-      <span style={{ width: '30px', height: '30px', backgroundColor: '#A16FEC', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', marginRight: '10px' }}>
-        <i className="fas fa-envelope" style={{ color: '#fff' }}></i>
-      </span>
-      ajarmehoroub12@gmail.com
-    </p>
-  </div>
-</div>
-
+          <div className="h-100 d-flex flex-column align-items-center justify-content-center" style={{ padding: '20px', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
+            <h4>Contact Information</h4>
+            <p style={{ fontSize: '1rem', color: '#777', marginTop: '20px', textAlign: 'center' }}>
+              Feel free to reach out to me for any inquiries or questions.
+            </p>
+            <p style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
+              <span style={{ width: '30px', height: '30px', backgroundColor: '#A16FEC', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', marginRight: '10px' }}>
+                <i className="fas fa-phone-alt" style={{ color: '#fff' }}></i>
+              </span>
+              +962790647508
+            </p>
+            <p style={{ display: 'flex', alignItems: 'center' }}>
+              <span style={{ width: '30px', height: '30px', backgroundColor: '#A16FEC', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', marginRight: '10px' }}>
+                <i className="fas fa-envelope" style={{ color: '#fff' }}></i>
+              </span>
+              ajarmehoroub12@gmail.com
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
