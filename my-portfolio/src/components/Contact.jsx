@@ -41,12 +41,12 @@ export default function Contact() {
     };
 
     emailjs
-    .sendForm(
-      'service_or66nvs', 
-     'template_byn78oh', 
-      e.target,
-      '-rJ_ERf_0tM3hodn8'
-    )
+    .send('service_or66nvs', 'template_byn78oh', {
+      name,
+      email,
+      message,
+    }, '-rJ_ERf_0tM3hodn8')
+ 
       .then(
         (response) => {
           console.log('Message sent successfully', response);
