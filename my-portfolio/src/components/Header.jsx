@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import useDark from '../customhooks/UseDark';
+import useDark from '../customhooks/useDark';
 
 
 export default function Header() {

@@ -118,25 +118,26 @@ export default function Contact() {
           </form>
         </div>
         <div className="col-lg-4 col-md-5">
-          <div className="h-100 d-flex flex-column align-items-center justify-content-center" style={{ padding: '20px', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
-            <h4>Contact Information</h4>
-            <p style={{ fontSize: '1rem', color: '#777', marginTop: '20px', textAlign: 'center' }}>
-              Feel free to reach out to me for any inquiries or questions.
-            </p>
-            <p style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
-              <span style={{ display: 'inline-block', width: '30px', height: '30px', backgroundColor: '#A16FEC', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', marginRight: '10px' }}>
-                <i className="fas fa-phone-alt" style={{ color: '#fff' }}></i>
-              </span>
-              +962790647508
-            </p>
-            <p style={{ display: 'flex', alignItems: 'center' }}>
-              <span style={{ display: 'inline-block', width: '30px', height: '30px', backgroundColor: '#A16FEC', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', marginRight: '10px' }}>
-                <i className="fas fa-envelope" style={{ color: '#fff' }}></i>
-              </span>
-              ajarmehoroub12@gmail.com
-            </p>
-          </div>
-        </div>
+  <div className="h-100 d-flex flex-column align-items-center justify-content-center" style={{ padding: '20px', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
+    <h4>Contact Information</h4>
+    <p style={{ fontSize: '1rem', color: '#777', marginTop: '20px', textAlign: 'center' }}>
+      Feel free to reach out to me for any inquiries or questions.
+    </p>
+    <p style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
+      <span style={{ width: '30px', height: '30px', backgroundColor: '#A16FEC', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', marginRight: '10px' }}>
+        <i className="fas fa-phone-alt" style={{ color: '#fff' }}></i>
+      </span>
+      +962790647508
+    </p>
+    <p style={{ display: 'flex', alignItems: 'center' }}>
+      <span style={{ width: '30px', height: '30px', backgroundColor: '#A16FEC', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', marginRight: '10px' }}>
+        <i className="fas fa-envelope" style={{ color: '#fff' }}></i>
+      </span>
+      ajarmehoroub12@gmail.com
+    </p>
+  </div>
+</div>
+
       </div>
     </div>
   );
