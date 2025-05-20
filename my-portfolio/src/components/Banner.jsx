@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Banner() {
   const downloadcv = () => {
-    const pdfUrl = "public/oroubAjarmeh-Full-Stack-Web-Developer.pdf"; // Make sure to use a relative path or public path
+    const pdfUrl = "/oroubAjarmeh-Full-Stack-Web-Developer.pdf"; // Make sure to use a relative path or public path
     const link = document.createElement("a");
     link.href = pdfUrl;
     link.download = "oroubAjarmeh-Full Stack Web Developer.pdf"; // specify the filename
