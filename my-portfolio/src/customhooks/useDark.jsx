@@ -11,7 +11,7 @@ export default function useDark() {
       element.style.color = 'white';
       element.style.backgroundImage = 'linear-gradient(180deg, rgba(0, 0, 0, 0.8) 21%, rgba(50, 50, 50, 0.9) 46%, rgba(0, 0, 0, 1) 91%)';
       document.getElementById('header').style.backgroundColor ="rgba(50, 50, 50, 0.4) ";
-   document.getElementById('connect').style.backgroundColor='rgba(50, 50, 50, 0.6)'
+      document.getElementById('connect').style.backgroundColor='rgba(50, 50, 50, 0.6)'
    const paragraphs = document.getElementsByTagName('p'); // Get all <p> elements
 
    // Loop through all <p> elements and change their color

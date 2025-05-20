@@ -34,36 +34,7 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Graphic Design Card */}
-        <div className="col-md-4 mb-4">
-          <div className="card d-flex flex-column h-100 text-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)' }}>
-            <div className="card-body">
-              <div className="mb-4" style={{ fontSize: '2rem', color: "#B197FC" }}>
-                <i className="fa-solid fa-paintbrush"></i>
-              </div>
-              <h5 className="card-title">Graphic Design</h5>
-              <p className="card-text">
-                Designing eye-catching visuals and branding materials using Canva.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Web Design Card */}
-        <div className="col-md-4 mb-4">
-          <div className="card d-flex flex-column h-100 text-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)' }}>
-            <div className="card-body">
-              <div className="mb-4" style={{ fontSize: '2rem', color: "#B197FC" }}>
-                <i className="fa-solid fa-desktop"></i>
-              </div>
-              <h5 className="card-title">Web Design</h5>
-              <p className="card-text">
-                Crafting user-friendly, aesthetic, and responsive web designs with Figma.
-              </p>
-            </div>
-          </div>
-        </div>
-
+       
         {/* Backend Development Card */}
         <div className="col-md-4 mb-4">
           <div className="card d-flex flex-column h-100 text-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)' }}>
@@ -79,20 +50,7 @@ export default function Services() {
           </div>
         </div>
 
-        {/* UI/UX Design Card */}
-        <div className="col-md-4 mb-4">
-          <div className="card d-flex flex-column h-100 text-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)' }}>
-            <div className="card-body">
-              <div className="mb-4" style={{ fontSize: '2rem', color: "#B197FC" }}>
-                <i className="fa-solid fa-user"></i>
-              </div>
-              <h5 className="card-title">UI/UX Design</h5>
-              <p className="card-text">
-                Enhancing user experiences by designing intuitive interfaces and seamless navigation flows.
-              </p>
-            </div>
-          </div>
-        </div>
+     
       </div>
     </>
   );

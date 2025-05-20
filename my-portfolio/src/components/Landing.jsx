@@ -11,7 +11,7 @@ import Footer from './Footer'
 export default function Landing() {
 
   return (
-    <div>
+    <div className='container'>
 <Header/>
 <div id="main">
 <Banner/>
